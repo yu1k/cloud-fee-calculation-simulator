@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <title>料金計算</title>
+</head>
+<body>
+    <div>
+        <h1>料金計算シミュレーション</h1>
+    </div>
+    <div>
+        <h2>Vultr Compute Instances</h2>
+        <p>インスタンスの種類を選択</p>
+        <form name="vultrForm">
+            <input type="radio" name="instancePerformance" value="core1ram512mb" > 1CPU RAM512MB
+            <input type="radio" name="instancePerformance" value="core1ram1024mb"> 1CPU RAM1024MB
+            <input type="radio" name="instancePerformance" value="core1ram2gb"> 1CPU RAM2GB
+            <input type="radio" name="instancePerformance" value="core2ram4gb"> 2CPU RAM4GB
+            <input type="radio" name="instancePerformance" value="core4ram8gb"> 4CPU RAM8GB
+            <input type="radio" name="instancePerformance" value="core6ram16gb"> 6CPU RAM16GB
+            <input type="radio" name="instancePerformance" value="core8ram32gb"> 8CPU RAM32GB
+            <input type="radio" name="instancePerformance" value="core16ram64gb"> 16CPU RAM64GB
+            <input type="radio" name="instancePerformance" value="core24ram96gb"> 24CPU RAM96GB
+        </form>
+        <p>使用する時間を入力（単位：n時間）</p>
+        <input type="number" id="usageTime" name="name" min="0" max="1000000007" maxlength="10" size="40">
+        <input type="button" value="計算" onclick="clickBtnVultr();">
+        <!--<button type="submit">計算</button>-->
+
+        <!--  -->
+        <div id="inner-result"></div>
+    </div>
+
+    <script src="./src/index.js"></script>
+</body>
+</html>
