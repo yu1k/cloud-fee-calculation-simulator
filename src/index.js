@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 
 // vultr
 function clickBtnVultr(){
