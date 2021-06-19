@@ -39,16 +39,30 @@
         <p>使用する時間を入力（単位：n時間）</p>
         <input type="number" id="usageTime" name="name" min="0" max="1000000007" maxlength="10" size="40">
         <input type="button" value="計算" onclick="clickBtnVultr();">
-        <!--<button type="submit">計算</button>-->
+        <!-- 表示 -->
         <div id="vultr-result"></div>
+    </div>
 
+    <div>
         <h2>トラフィック量計算</h2>
-        <p>bps -> B/sに変換</p>
-        <form name="">
-            <input type="text">
+
+        <!-- Mbps -> MB/s -->
+        <p>Mbps -> MB/sに変換</p>
+        <p>トラフィック量を入力（単位：n Mbps）</p>
+        <form name="traffic-transfor-mbps-to-mb">
+            <input type="number" id="traffic-volume-mbps-to-mb" name="name" min="0" max="1000000007" maxlength="10" size="40">
+            <input type="button" value="計算" onclick="trafficTransforMbpsToMb();">
         </form>
-        <!--  -->
-        <div id="inner-result"></div>
+        <div id="traffic-transfor-mbps-to-mb-result"></div>
+
+        <!-- MB/s -> Mbps -->
+        <p>MB/s -> Mbpsに変換</p>
+        <p>トラフィック量を入力（単位：n MB/s）</p>
+        <form name="traffic-transfor-mb-to-mbps">
+            <input type="number" id="traffic-volume-mb-to-mbps" name="name" min="0" max="1000000007" maxlength="10" size="40">
+            <input type="button" value="計算" onclick="trafficTransforMbToMbps();">
+        </form>
+        <div id="traffic-transfor-mb-to-mbps-result"></div>
     </div>
 
     <script src="./src/index.js"></script>

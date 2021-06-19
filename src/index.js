@@ -21,3 +21,17 @@ function clickBtnVultr(){
         }
     }
 }
+
+// Mbps -> MB/s
+function trafficTransforMbpsToMb(){
+    const trafficVolumeMbps = document.getElementById("traffic-volume-mbps-to-mb").value;
+    let trafficVolumeMbpsToMbResult = trafficVolumeMbps / 8; // 1Mbps = (1 / 8)MB/s
+    document.getElementById("traffic-transfor-mbps-to-mb-result").textContent =  trafficVolumeMbps + " Mbps は " + trafficVolumeMbpsToMbResult + " MB/s です";
+}
+
+// MB/s -> Mbps
+function trafficTransforMbToMbps(){
+    const trafficVolumeMb = document.getElementById("traffic-volume-mb-to-mbps").value;
+    let trafficVolumeMbToMbpsResult = trafficVolumeMb * 8; // 1MB = 8Mbps
+    document.getElementById("traffic-transfor-mb-to-mbps-result").textContent =  trafficVolumeMb + " MB/s は " + trafficVolumeMbToMbpsResult + " Mbps です";
+}
