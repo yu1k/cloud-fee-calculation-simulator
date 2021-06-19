@@ -15,7 +15,7 @@ function clickBtnVultr(){
             // デバッグ用
             console.log(res);
             
-            document.getElementById("inner-result").textContent = 
+            document.getElementById("vultr-result").textContent = 
             document.vultrForm.instancePerformance[i].value + ` を ` + usageTime + ` 時間使用した際の料金 : ` + res + `$`;
             break;
         }
